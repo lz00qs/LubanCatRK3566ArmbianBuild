@@ -118,7 +118,7 @@ function create_sources_list_and_deploy_repo_key() {
 			EOF
 			;;
 
-		bullseye | trixie)
+		bullseye)
 			cat <<- EOF > "${basedir}"/etc/apt/sources.list
 				deb http://${DEBIAN_MIRROR} $release main contrib non-free
 				#deb-src http://${DEBIAN_MIRROR} $release main contrib non-free
@@ -134,7 +134,7 @@ function create_sources_list_and_deploy_repo_key() {
 			EOF
 			;;
 
-		bookworm)
+		bookworm | trixie)
 			# non-free firmware in bookworm and later has moved from the non-free archive component to a new non-free-firmware component (alongside main/contrib/non-free). This was implemented on 2023-01-27, see also https://lists.debian.org/debian-boot/2023/01/msg00235.html
 			cat <<- EOF > "${basedir}"/etc/apt/sources.list
 				deb http://${DEBIAN_MIRROR} $release main contrib non-free non-free-firmware
@@ -160,11 +160,11 @@ function create_sources_list_and_deploy_repo_key() {
 				#deb-src http://${DEBIAN_MIRROR} unstable main contrib non-free non-free-firmware
 			EOF
 
-				# Exception: with riscv64 not everything was moved from ports
-				# https://lists.debian.org/debian-riscv/2023/07/msg00053.html
-				if [[ "${ARCH}" == riscv64 ]]; then
-					echo "deb http://deb.debian.org/debian-ports/ sid main " >> "${basedir}"/etc/apt/sources.list
-				fi
+			# Exception: with riscv64 not everything was moved from ports
+			# https://lists.debian.org/debian-riscv/2023/07/msg00053.html
+			if [[ "${ARCH}" == riscv64 ]]; then
+				echo "deb http://deb.debian.org/debian-ports/ sid main " >> "${basedir}"/etc/apt/sources.list
+			fi
 			;;
 
 		focal | jammy | kinetic | lunar)
