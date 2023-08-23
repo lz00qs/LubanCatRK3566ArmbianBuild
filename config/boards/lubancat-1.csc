@@ -2,7 +2,7 @@
 BOARD_NAME="lubancat-1"
 BOARDFAMILY="rk35xx"
 BOARD_MAINTAINER=""
-BOOTCONFIG="rock-3c-rk3566_defconfig"
+BOOTCONFIG="lubancat-rk3566_defconfig"
 KERNEL_TARGET="edge,current"
 FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
