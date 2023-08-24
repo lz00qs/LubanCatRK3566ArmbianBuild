@@ -1,18 +1,18 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Igor Pecovnik <igor.pecovnik@****l.com>
 Date: Thu, 24 Aug 2023 04:12:38 +0000
-Subject: Patching u-boot rockchip64 files configs/rk3566-lubancat-1_defconfig
+Subject: Patching u-boot rockchip64 files configs/lubancat-1-rk3566_defconfig
 
 Signed-off-by: Igor Pecovnik <igor.pecovnik@****l.com>
 ---
- configs/rk3566-lubancat-1_defconfig | 220 ++++++++++
+ configs/lubancat-1-rk3566_defconfig | 220 ++++++++++
  1 file changed, 220 insertions(+)
 
-diff --git a/configs/rk3566-lubancat-1_defconfig b/configs/rk3566-lubancat-1_defconfig
+diff --git a/configs/lubancat-1-rk3566_defconfig b/configs/lubancat-1-rk3566_defconfig
 new file mode 100644
 index 0000000000..f7131f261f
 --- /dev/null
-+++ b/configs/rk3566-lubancat-1_defconfig
++++ b/configs/lubancat-1-rk3566_defconfig
 @@ -0,0 +1,220 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_ROCKCHIP=y
