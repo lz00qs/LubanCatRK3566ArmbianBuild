@@ -1,19 +1,19 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Igor Pecovnik <igor.pecovnik@****l.com>
-Date: Tue, 22 Aug 2023 18:53:46 +0000
-Subject: Patching u-boot rockchip64 files lubancat-rk3566_defconfig
+Date: Thu, 24 Aug 2023 04:12:38 +0000
+Subject: Patching u-boot rockchip64 files configs/rk3566-lubancat-1_defconfig
 
 Signed-off-by: Igor Pecovnik <igor.pecovnik@****l.com>
 ---
- lubancat-rk3566_defconfig | 222 ++++++++++
- 1 file changed, 222 insertions(+)
+ configs/rk3566-lubancat-1_defconfig | 220 ++++++++++
+ 1 file changed, 220 insertions(+)
 
-diff --git a/lubancat-rk3566_defconfig b/lubancat-rk3566_defconfig
+diff --git a/configs/rk3566-lubancat-1_defconfig b/configs/rk3566-lubancat-1_defconfig
 new file mode 100644
-index 0000000000..f8d3819961
+index 0000000000..f7131f261f
 --- /dev/null
-+++ b/lubancat-rk3566_defconfig
-@@ -0,0 +1,222 @@
++++ b/configs/rk3566-lubancat-1_defconfig
+@@ -0,0 +1,220 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_ROCKCHIP=y
 +CONFIG_SPL_LIBCOMMON_SUPPORT=y
@@ -31,8 +31,8 @@ index 0000000000..f8d3819961
 +CONFIG_SPL_NAND_SUPPORT=y
 +CONFIG_SPL_SPI_FLASH_SUPPORT=y
 +CONFIG_SPL_SPI_SUPPORT=y
-+CONFIG_DEFAULT_DEVICE_TREE="rk3568-evb"
-+CONFIG_SMBIOS_PRODUCT_NAME="lubancat"
++CONFIG_DEFAULT_DEVICE_TREE="rk3566-rock-3c"
++CONFIG_SMBIOS_PRODUCT_NAME=""
 +CONFIG_DEBUG_UART=y
 +CONFIG_FIT=y
 +CONFIG_FIT_IMAGE_POST_PROCESS=y
@@ -92,7 +92,6 @@ index 0000000000..f8d3819961
 +CONFIG_CMD_TFTPPUT=y
 +CONFIG_CMD_TFTP_BOOTM=y
 +CONFIG_CMD_TFTP_FLASH=y
-+CONFIG_CMD_DDR_TEST_TOOL=y
 +# CONFIG_CMD_MISC is not set
 +# CONFIG_CMD_CHARGE_DISPLAY is not set
 +CONFIG_CMD_MTD_BLK=y
@@ -235,7 +234,6 @@ index 0000000000..f8d3819961
 +CONFIG_RK_AVB_LIBAVB_USER=y
 +CONFIG_OPTEE_CLIENT=y
 +CONFIG_OPTEE_V2=y
-+
 -- 
 Created with Armbian build tools https://github.com/armbian/build
 

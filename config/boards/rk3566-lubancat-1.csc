@@ -1,8 +1,9 @@
 # Rockchip RK3566 quad core EmbedFire LubanCat 1
-BOARD_NAME="lubancat-1"
+BOARD_NAME="rk3566-lubancat-1"
 BOARDFAMILY="rk35xx"
 BOARD_MAINTAINER=""
-BOOTCONFIG="lubancat-rk3566_defconfig"
+BOOTCONFIG="rk3566-lubancat-1_defconfig"
+#BOOTCONFIG="rock-3c-rk3566_defconfig"
 KERNEL_TARGET="edge,current"
 FULL_DESKTOP="yes"
 BOOT_LOGO="desktop"
